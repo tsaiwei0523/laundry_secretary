@@ -1,0 +1,345 @@
+<html>
+  <head>
+    <title>洗衣小秘書管理系統</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../static/layout.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../static/pyscript.css" rel="stylesheet"  />
+    <style type="text/css"></style>
+
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <script src="static/jquery.min.js"></script>
+    <script src="static/jquery.backtotop.js"></script>
+    <script src="static/jquery.mobilemenu.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <t name="Homepage" t-name="website.homepage">
+      <t t-call="website.layout">
+          <t t-set="pageName" t-value="'homepage'"/>
+          
+          <!-- <div id="wrap" class="oe_structure oe_empty"><section class="s_cover o_cc o_cc5 pt200 pb200 o_colored_level oe_img_bg o_bg_img_center" data-scroll-background-ratio="0" data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Bold/12_001&quot;,&quot;flip&quot;:[&quot;x&quot;]}" style="background-image: url(&quot;../static/.s_cover_default_image.jpg&quot;); background-position: 50% 0px;" data-snippet="s_cover" data-name="Cover"> -->
+            <div id="wrap" class="oe_structure oe_empty"><section class="s_cover o_cc o_cc5 pt200 pb200 o_colored_level oe_img_bg o_bg_img_center" data-scroll-background-ratio="0" data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Bold/12_001&quot;,&quot;flip&quot;:[&quot;x&quot;]}" style="background-image: url('/static/12_001.png'); background-position: 50% 0px;" data-snippet="s_cover" data-name="Cover">
+
+            <div class="o_we_bg_filter bg-black-50">
+
+            <div class="wrapper row1">
+                <header id="header" style="padding:0px;" class="hoc clear">
+                  <!-- ################################################################################################ -->
+                  <div id="logo" class="fl_left">
+                    <h1><img style="height:80px;padding:10px;" src="static/logo.png" /><a href="../index.html">洗衣小秘書</a></h1>
+                  </div>
+                  <div class="fl_right"><a style="margin:0px;" class="btn" href="#">Log out</a></div>
+                  <!-- ################################################################################################ -->
+                </header>
+              </div>
+              
+
+          <!-- <div class="o_we_shape o_web_editor_Bold_12_001" style="background-image: url(&quot;/web_editor/shape/web_editor/Bold/12_001.svg?c1=rgba%280%2C%200%2C%200%2C%200.5%29&amp;c2=rgba%280%2C%200%2C%200%2C%200.25%29&amp;c5=o-color-5&amp;flip=x&quot;); background-position: 50% 50%;"/> -->
+          <div class="o_we_shape o_web_editor_Bold_12_001" style="background-image: url('/static/website.s_cover_default_image.jpg'); background-position: 50% 50%;"/>
+
+
+          <div class="o_we_shape o_web_editor_Bold_12_001" style="background-image: url('/static/website.s_cover_default_image.jpg'); background-position: 50% 50%;"/>
+          <div class="container s_allow_columns">
+              <h1 style="text-align: center;">
+                <h style="font-size: 62px; font-weight: bold;">
+          Creative Studio
+                </h></h1>
+              <p class="lead o_default_snippet_text" style="text-align: center;">
+          We combine smart design with rich technology <br/>to craft innovative products.
+      </p>
+              <p style="text-align: center;">
+                  <a class="btn btn-primary mb-2 o_default_snippet_text" href="/contactus">Contact us</a>
+              </p>
+          </div>
+      <!-- </section><section class="s_features pt40 pb48 o_cc o_cc5" data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Floats/12&quot;}" data-snippet="s_features" data-name="Features"> -->
+          <div class="o_we_shape o_web_editor_Floats_12" styles="">
+          <div class="container">
+             
+            <div class="wrapper row3">
+                <main class="hoc container clear"> 
+                  <!-- main body -->
+                  <!-- ################################################################################################ -->
+                  <div style="padding-bottom: 25px; margin-bottom: -50px; " class="content">
+                    <!-- ################################################################################################ -->
+                    <!-- ################################################################################################ -->
+                    <h2>機臺狀態</h2>
+              
+                    <!-- <p>
+                      <button onclick="gotoPage('a_check_record_page.html')" style="height:25px;background-color:white;">全機台編輯紀錄</button>
+                      /
+                    <button style="height:25px;background-color:white;">新增機臺</button>
+                  </p> -->
+              
+                    <!-- ################################################################################################ -->
+                    <div style="color:black;" class="group btmspace-15 demo" >
+                      <div style="background:#D0CECE;" class="one_third first">編號</div>
+                      <div style="background:#D0CECE;" class="one_third">狀態</div>
+                      <div style="background:#D0CECE;" class="one_third">運轉剩餘時間</div>
+                    </div>
+              
+                    <!-- {% for item in items %}
+                
+                    <div class="group btmspace-10 demo" >
+                      <button style="height:38px;background-color:white;" class="one_third first" id="data_area">
+                        {{ item.washer_id }}
+                      </button>
+                      <div class="one_third" >{{ item.state_id }}</div>
+                      <div class="one_third" >{{ item.left_time }}</div>
+                    </div>
+                    {% endfor %} -->
+              
+              
+                    <!-- 增加測試用的<div>元素 -->
+                      <!-- <div>
+                        {% if items %}
+                          {% for item in items %}
+                            <h2>{{ item }}</h2>
+                          {% endfor %}
+                        {% else %}
+                          <h2>its null</h2>
+                        {% endif %}
+                      </div>
+              
+                      <div>
+                        {% for item in items %} 
+                          <div class="one_third first" id="data_area_{{ item.washer_id }}" style="border: 2px solid red; padding: 10px; margin-bottom: 10px;">
+                            <strong>Left Time: {{ item.left_time }}</strong> 
+                            <br>State ID: {{ item.state_id }}<br>
+                            ID: {{ item.washer_id }}
+                          </div>
+                        {% endfor %}
+                      </div> -->
+              
+                      <div id="data_area">
+              
+                      </div>
+                      
+                      
+              
+                      <!-- <div>
+                        {item}
+                      
+                        {% for item in items %} 
+                          <h2>item</h2> -->
+                           <!-- <div class="one_third first" id="data_area_{{ item.washer_id }}" style="border: 2px solid red; padding: 10px; margin-bottom: 10px;">
+                            <strong>Left Time: </strong> 
+                            <br>State ID: <br>
+                            ID: 
+                          </div>  -->
+                        <!-- {% endfor %} 
+                      </div> -->
+                      
+                      
+              
+                    <!--      <div class="group demo">-->
+              <!--        <div class="one_third first">1/3</div>-->
+              <!--        <div class="two_third">2/3</div>-->
+              <!--      </div>-->
+              
+              <!--      <h2>Half</h2>-->
+              <!--      &lt;!&ndash; ################################################################################################ &ndash;&gt;-->
+              <!--      <div class="group btmspace-50 demo">-->
+              <!--        <div class="one_half first">1/2</div>-->
+              <!--        <div class="one_half">1/2</div>-->
+              <!--      </div>-->
+              <!--      &lt;!&ndash; ################################################################################################ &ndash;&gt;-->
+              <!--      <h2>Quarter</h2>-->
+              <!--      &lt;!&ndash; ################################################################################################ &ndash;&gt;-->
+              <!--      <div class="group btmspace-50 demo">-->
+              <!--        <div class="one_quarter first">1/4</div>-->
+              <!--        <div class="one_quarter">1/4</div>-->
+              <!--        <div class="one_quarter">1/4</div>-->
+              <!--        <div class="one_quarter">1/4</div>-->
+              <!--      </div>-->
+              <!--      <div class="group btmspace-50 demo">-->
+              <!--        <div class="one_quarter first">1/4</div>-->
+              <!--        <div class="one_quarter">1/4</div>-->
+              <!--        <div class="two_quarter">2/4 or 1/2</div>-->
+              <!--      </div>-->
+              <!--      <div class="group btmspace-50 demo">-->
+              <!--        <div class="one_quarter first">1/4</div>-->
+              <!--        <div class="three_quarter">3/4</div>-->
+              <!--      </div>-->
+              
+                    <!-- ################################################################################################ -->
+                  </div>
+                  <!-- ################################################################################################ -->
+                  <!-- / main body -->
+                  <div class="clear"></div>
+                </main>
+              </div>
+
+            
+            
+            <div class="row">
+                  <div class="col-lg-4 pt32 pb32 text-center">
+                      <i class="fa fa-3x fa-gear rounded bg-primary m-3"/>
+                      <h3>
+          Intuitive
+      </h3>
+                      <p>
+          We create easy-to-use products.
+      </p>
+                  </div>
+                  <div class="col-lg-4 pt32 pb32 text-center">
+                      <i class="fa fa-3x fa-photo rounded m-3 bg-o-color-4"/>
+                      <h3>
+          Adaptable
+      </h3>
+                      <p>
+          We build modular solutions.
+      </p>
+                  </div>
+                  <div class="col-lg-4 pt32 pb32 text-center">
+                      <i class="fa fa-3x fa-leaf rounded bg-secondary m-3"/>
+                      <h3>
+          Durable
+      </h3>
+                      <p>
+          We craft long-lasting goods.
+      </p>
+                  </div>
+              </div>
+          </div>
+      </section><section class="s_text_block o_cc o_cc1 pt96 pb96 o_colored_level" data-snippet="s_text_block" data-name="Text" style="background-image: none;">
+          <div class="s_allow_columns o_container_small">
+              <p>Great stories have a <b>personality</b>. Consider telling a great story that provides personality. Writing a story with personality for potential clients will assist with making a relationship connection. This shows up in small quirks like word choices or phrases. Write from your point of view, not from someone else's experience.</p>
+              <p>Great stories are <b>for everyone</b> even when only written <b>for just one person</b>. If you try to write with a wide, general audience in mind, your story will sound fake and lack emotion. No one will be interested. Write for one person. If it��s genuine for the one, it��s genuine for the rest.</p>
+          </div>
+      </section><section class="s_image_gallery o_masonry pb24 o_cc o_cc5 o_spc-medium pt96" data-vcss="001" data-columns="3" style="overflow: hidden;" data-snippet="s_images_wall" data-name="Images Wall">
+          <div class="container-fluid">
+              <div class="row s_nb_column_fixed">
+                  <div class="o_masonry_col o_snippet_not_selectable col-lg-4">
+                      <img class="img img-fluid d-block" src="/static/website.library_image_03.jpg" data-index="0" data-name="Image" loading="lazy" style=""/>
+                      <img class="img img-fluid d-block" src="/static/website.library_image_10.jpg" data-index="3" data-name="Image" loading="lazy" style=""/>
+                  </div>
+                  <div class="o_masonry_col o_snippet_not_selectable col-lg-4">
+                      <img class="img img-fluid d-block" src="/static/website.library_image_13.jpg" data-index="1" data-name="Image" loading="lazy" style=""/>
+                      <img class="img img-fluid d-block" src="/static/website.library_image_05.jpg" data-index="4" data-name="Image" loading="lazy" style=""/>
+                  </div>
+                  <div class="o_masonry_col o_snippet_not_selectable col-lg-4">
+                      <img class="img img-fluid d-block" src="/static/website.library_image_14.jpg" data-index="2" data-name="Image" loading="lazy" style=""/>
+                      <img class="img img-fluid d-block" src="/static/website.library_image_16.jpg" data-index="5" data-name="Image" loading="lazy" style=""/>
+                  </div>
+              </div>
+          </div>
+      </section><section class="s_parallax parallax s_parallax_is_fixed bg-black-50 o_half_screen_height pt48 pb48" data-scroll-background-ratio="1" data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Rainy/10&quot;, &quot;flip&quot;:[&quot;x&quot;,&quot;y&quot;]}" data-snippet="s_parallax" data-name="Parallax">
+        <span class="s_parallax_bg oe_img_bg" style="background-image: url(&#39;/web/image/website.s_parallax_default_image&#39;); background-position: 50% 75%;"></span>
+        <div class="o_we_bg_filter bg-black-50"></div>
+          <div class="o_we_shape o_web_editor_Rainy_10" style="background-image: url(&quot;/web_editor/shape/web_editor/Rainy/10.svg?c1=o-color-1&amp;c3=o-color-3&amp;flip=xy&quot;); background-position: 50% 50%;"/>
+          <div class="oe_structure oe_empty" data-editor-message-default="true" data-editor-message="DRAG BUILDING BLOCKS HERE">
+          <section class="s_title pt40 pb40" data-vcss="001" data-name="Title">
+              <div class="container s_allow_columns">
+                  <h3 style="text-align: center;"><font class="bg-o-color-5">Feel free to come up with your big idea. <br/> We take care of the rest.</font></h3>
+              </div>
+          </section></div>
+      </section><section class="s_references pt48 pb32 o_cc o_cc5" data-snippet="s_references" data-name="References">
+          <div class="container">
+              <h2 style="text-align: center;">Our References</h2>
+              <p style="text-align: center;font-size: 2em;">We are in good company.</p>
+              <div class="row">
+                  <!-- <div class="col-lg-2 pt16 pb16">
+                      <img src="/web/image/website.s_reference_demo_image_1" class="img img-fluid mx-auto" alt="" loading="lazy" style=""/>
+                  </div>
+                  <div class="col-lg-2 pt16 pb16">
+                      <img src="/web/image/website.s_reference_demo_image_2" class="img img-fluid mx-auto" alt="" loading="lazy" style=""/>
+                  </div>
+                  <div class="col-lg-2 pt16 pb16">
+                      <img src="/web/image/website.s_reference_demo_image_3" class="img img-fluid mx-auto" alt="" loading="lazy" style=""/>
+                  </div>
+                  <div class="col-lg-2 pt16 pb16">
+                      <img src="/web/image/website.s_reference_demo_image_4" class="img img-fluid mx-auto" alt="" loading="lazy" style=""/>
+                  </div>
+                  <div class="col-lg-2 pt16 pb16">
+                      <img src="/web/image/website.s_reference_demo_image_5" class="img img-fluid mx-auto" alt="" loading="lazy" style=""/>
+                  </div>
+                  <div class="col-lg-2 pt16 pb16">
+                      <img src="/web/image/website.s_reference_default_image_6" class="img img-fluid mx-auto" alt="" loading="lazy" style=""/>
+                  </div> -->
+              </div>
+          </div>
+      </section></div>
+      </t>
+  </t>
+
+  <!-- JAVASCRIPTS -->
+<script src="static/jquery.min.js"></script>
+<script src="static/jquery.backtotop.js"></script>
+<script src="static/jquery.mobilemenu.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  function gotoPage(pageUrl) {
+    window.location.href = pageUrl;
+  }
+</script>
+
+
+<script>
+  function updateData() {
+  $.ajax({
+    url: 'http://127.0.0.1:5001/get_latest_data',
+    type: 'GET',
+    dataType: 'json',
+    success: function(response) {
+      console.log(JSON.stringify(response));
+      // 清空原有資料
+      $('#data_area').empty();
+      
+      // 更新頁面上的資料
+      Object.values(response).forEach(function(dataItem) {
+        console.log("dataItem.washer_id:",dataItem.washer_id)
+        console.log("dataItem.left_time:",dataItem.left_time)
+        console.log("dataItem.state_id:",dataItem.state_id)
+
+        // var div1 = $('<div class="one_third first style="border: 2px solid red; padding: 10px; margin-bottom: 10px;"></div>');
+        // div.html('<strong>Left Time: ' + dataItem.left_time + '</strong><br>State ID: ' + dataItem.state_id + '<br>ID: ' + dataItem.washer_id);
+
+        // 使用模板字符串来动态生成HTML
+        // var div = $(`
+        //   <div class="group btmspace-10 demo">
+        //     <div class="one_third first">${dataItem.washer_id}</div>
+        //     <div class="one_third">${dataItem.state_id}</div>
+        //     <div class="one_third">${dataItem.left_time}</div>
+        //   </div>
+        // `);
+
+        var div = $('<div class="group btmspace-10 demo"><div class="one_third first">' + dataItem.washer_id + '</div><div class="one_third">'+ dataItem.state_id + '</div><div class="one_third">'+ dataItem.left_time + '</div></div>');
+        // div.html( dataItem.left_time  + dataItem.state_id  + dataItem.washer_id);
+
+        
+
+        // var div = $('<div class="one_third first" id="data_area_' + dataItem.washer_id + '" style="border: 2px solid red; padding: 10px; margin-bottom: 10px;"></div>');
+        // div.html('<strong>Left Time: ' + dataItem.left_time + '</strong><br>State ID: ' + dataItem.state_id + '<br>ID: ' + dataItem.washer_id);
+        $('#data_area').append(div);
+      });
+    },
+    error: function(xhr, status, error) {
+      console.error('Error:', error);
+    }
+  });
+}
+
+  // $(document).ready(function() {
+  //   updateData();
+  //   console.log('updateData');
+  //   setInterval(updateData, 10000);
+  // });
+  </script>
+  <script>
+    // 確保在 HTML 載入完成後再執行 updateData()
+  $(document).ready(function() {
+      updateData();
+      console.log('updateData');
+      // 每 2 分鐘重新獲取一次最新資料並更新頁面
+    //   setInterval(updateData, 120000);
+    setInterval(updateData, 5000);
+
+});
+  </script>
+  
+
+
+  </body>
+</html>

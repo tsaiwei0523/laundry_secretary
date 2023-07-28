@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<!--
+Template Name: Drywest
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>洗衣小秘書管理系統</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../static/layout.css" rel="stylesheet" type="text/css" media="all">
+<style type="text/css">
+/* DEMO ONLY */
+.container .demo{text-align:center;}
+.container .demo div{padding:8px 0;}
+.container .demo div:nth-child(odd){color:#000000; background:#FFFFFF; border:0.1px #000000 solid;}
+.container .demo div:nth-child(even){color:#000000; background:#FFFFFF; border:0.1px #000000 solid;}
+@media screen and (max-width:900px){.container .demo div{margin-bottom:0;}}
+/* DEMO ONLY */
+</style>
+</head>
+<body id="top">
+
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" style="padding:0px;" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1><img style="height:80px;padding:10px;" src="static/logo.png" /><a href="../index.html">洗衣小秘書</a></h1>
+    </div>
+    <div class="fl_right"><a style="margin:0px;" class="btn" href="#">Log out</a></div>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded" style="background-image:url('static/01.png');"> 
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div style="padding-bottom: 25px; margin-bottom: -50px; " class="content">
+      <!-- ################################################################################################ -->
+      <!-- ################################################################################################ -->
+      <h2>樓層選擇</h2>
+      <div style="color:black;" class="group btmspace-15 demo" >
+        <button onclick="toggleButtonVisibility('001_2F')"  class="one_quarter first" >
+          2F
+        </button>
+        <button  onclick="toggleButtonVisibility('001_3F')" class="one_quarter" >
+          3F
+        </button>
+        <button  onclick="toggleButtonVisibility('001_4F')" class="one_quarter" >
+          4F
+        </button>
+        <button  onclick="toggleButtonVisibility('001_5F')" class="one_quarter" >
+          5F
+        </button>
+      </div>
+      <div style="color:black;" class="group btmspace-15 demo" >
+        <button onclick="toggleButtonVisibility('001_6F')"  class="one_quarter first" >
+          6F
+        </button>
+        <button  onclick="toggleButtonVisibility('001_7F')" class="one_quarter" >
+          7F
+        </button>
+        <button onclick="toggleButtonVisibility('001_8F')" class="one_quarter" >
+          8F
+        </button>
+        <button onclick="toggleButtonVisibility('001_9F')" class="one_quarter" >
+          9F
+        </button>
+      </div>
+      <div style="color:black;" class="group btmspace-15 demo" >
+        <button onclick="toggleButtonVisibility('001_10F')"  class="one_quarter first" >
+          10F
+        </button>
+        <button  onclick="toggleButtonVisibility('001_11F')" class="one_quarter" >
+          11F
+        </button>
+        <button  onclick="toggleButtonVisibility('001_12F')" class="one_quarter" >
+          12F
+        </button>
+        <button  onclick="toggleButtonVisibility('001_13F')" class="one_quarter" >
+          13F
+        </button>
+      </div>
+      <div style="color:black;" class="group btmspace-15 demo" >
+        <button onclick="toggleButtonVisibility('001_14F')"  class="one_quarter first" >
+          14F
+        </button>
+      </div>
+      <h2>機臺狀態</h2>
+
+      <!-- <p>
+        <button onclick="gotoPage('a_check_record_page.html')" style="height:25px;background-color:white;">全機台編輯紀錄</button>
+        /
+      <button style="height:25px;background-color:white;">新增機臺</button>
+    </p> -->
+
+      <!-- ################################################################################################ -->
+      <div style="color:black;" class="group btmspace-15 demo" >
+        <div style="background:#D0CECE;" class="one_third first">編號</div>
+        <div style="background:#D0CECE;" class="one_third">狀態</div>
+        <div style="background:#D0CECE;" class="one_third">運轉剩餘時間</div>
+      </div>
+
+      <!-- {% for item in items %}
+  
+      <div class="group btmspace-10 demo" >
+        <button style="height:38px;background-color:white;" class="one_third first" id="data_area">
+          {{ item.washer_id }}
+        </button>
+        <div class="one_third" >{{ item.state_id }}</div>
+        <div class="one_third" >{{ item.left_time }}</div>
+      </div>
+      {% endfor %} -->
+
+
+      <!-- 增加測試用的<div>元素 -->
+        <!-- <div>
+          {% if items %}
+            {% for item in items %}
+              <h2>{{ item }}</h2>
+            {% endfor %}
+          {% else %}
+            <h2>its null</h2>
+          {% endif %}
+        </div>
+
+        <div>
+          {% for item in items %} 
+            <div class="one_third first" id="data_area_{{ item.washer_id }}" style="border: 2px solid red; padding: 10px; margin-bottom: 10px;">
+              <strong>Left Time: {{ item.left_time }}</strong> 
+              <br>State ID: {{ item.state_id }}<br>
+              ID: {{ item.washer_id }}
+            </div>
+          {% endfor %}
+        </div> -->
+
+        <div  id="data_area">
+
+        </div>
+        
+        
+
+        <!-- <div>
+          {item}
+        
+          {% for item in items %} 
+            <h2>item</h2> -->
+             <!-- <div class="one_third first" id="data_area_{{ item.washer_id }}" style="border: 2px solid red; padding: 10px; margin-bottom: 10px;">
+              <strong>Left Time: </strong> 
+              <br>State ID: <br>
+              ID: 
+            </div>  -->
+          <!-- {% endfor %} 
+        </div> -->
+        
+        
+
+      <!--      <div class="group demo">-->
+<!--        <div class="one_third first">1/3</div>-->
+<!--        <div class="two_third">2/3</div>-->
+<!--      </div>-->
+
+<!--      <h2>Half</h2>-->
+<!--      &lt;!&ndash; ################################################################################################ &ndash;&gt;-->
+<!--      <div class="group btmspace-50 demo">-->
+<!--        <div class="one_half first">1/2</div>-->
+<!--        <div class="one_half">1/2</div>-->
+<!--      </div>-->
+<!--      &lt;!&ndash; ################################################################################################ &ndash;&gt;-->
+<!--      <h2>Quarter</h2>-->
+<!--      &lt;!&ndash; ################################################################################################ &ndash;&gt;-->
+<!--      <div class="group btmspace-50 demo">-->
+<!--        <div class="one_quarter first">1/4</div>-->
+<!--        <div class="one_quarter">1/4</div>-->
+<!--        <div class="one_quarter">1/4</div>-->
+<!--        <div class="one_quarter">1/4</div>-->
+<!--      </div>-->
+<!--      <div class="group btmspace-50 demo">-->
+<!--        <div class="one_quarter first">1/4</div>-->
+<!--        <div class="one_quarter">1/4</div>-->
+<!--        <div class="two_quarter">2/4 or 1/2</div>-->
+<!--      </div>-->
+<!--      <div class="group btmspace-50 demo">-->
+<!--        <div class="one_quarter first">1/4</div>-->
+<!--        <div class="three_quarter">3/4</div>-->
+<!--      </div>-->
+
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+
+    <!-- <div class="clear"></div>
+  </main>
+</div> -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- <div class="wrapper row0">
+  <div id="topbar" class="hoc clear">
+     ################################################################################################ -->
+    <!-- <ul>
+      <li><i class="fa fa-clock-o"></i> Mon. - Fri. 8am - 5pm</li>
+      <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
+      <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
+      <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
+      <li><a href="#" title="Login"><i class="fa fa-lg fa-sign-in"></i></a></li>
+      <li><a href="#" title="Sign Up"><i class="fa fa-lg fa-edit"></i></a></li>
+    </ul> -->
+    <!-- ################################################################################################ -->
+  <!-- </div>
+</div>  -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+  
+  <!-- <div class="wrap"> -->
+    <!-- <div class="group btmspace-50 demo">
+    <div class="banner video-container" style="transform: scale(0.3); max-width: 100%;max-height: 400px;margin: 0 auto;">  -->
+      <!-- 添加video-container類別 -->
+      <!-- <video autoplay muted loop style="float: right;">
+        <source src="../static/small.mp4"  type="video/mp4">
+      </video>
+        </div>
+      </div> 
+    </div>
+    </div> -->
+
+
+    <!-- .video-container {  /* a_uer_page.html 影片*/
+      max-width: 100%; /* 影片寬度最大不超過容器的100% */
+      max-height: 400px; /* 影片高度最大不超過400像素 */
+      margin: 0 auto; /* 如果需要，使影片在容器中水平居中 */
+      max-width: 100%; /* 影片寬度最大不超過容器的100% */
+
+      max-height: 100%; /* 影片高度最大不超過容器的100% */
+      margin: 0 auto; /* 如果需要，使影片在容器中水平居中 */
+      transform: scale(0.5); /* 將影片縮放為原來的50%，你可以根據需要調整縮放比例 */
+     } -->
+  
+<!-- </div> -->
+
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="static/jquery.min.js"></script>
+<script src="static/jquery.backtotop.js"></script>
+<script src="static/jquery.mobilemenu.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  function gotoPage(pageUrl) {
+    window.location.href = pageUrl;
+  }
+</script>
+
+<script>
+    var hide_yet = 0;
+     // 確保在 HTML 載入完成後再執行 updateData()
+    // $(document).ready(function() {
+    //     updateData();
+    //     console.log('ready');
+
+    //     // 隱藏所有樓層的內容
+    //     for (var i = 2; i <= 14; i++) {
+    //       var floorClass = '001_' + i + 'F';
+    //       var elements = document.getElementsByClassName(floorClass);
+    //       console.log("ELE.len:" +String(elements.length))
+
+    //       // 對於每個符合條件的元素，進行你的操作
+    //       for (var j = 0; j < elements.length; j++) {
+    //       // var floors = document.querySelectorAll('[class^="001_"]');
+    //       //   // console.log("floors:"+ String(floors[1].textContent))
+    //       //   floors.forEach(function(floor) {
+    //       //     floor.style.display = 'none';
+    //       //     console.log("HIDE it")
+    //       //   });
+    //         // var floors = document.querySelectorAll('[class^="001_"]');
+    //         var floors = document.querySelectorAll(floorClass);
+    //           // console.log("floors:"+ String(floors[1].textContent))
+    //           floors.forEach(function(floor) {
+    //             floor.style.display = 'none';
+    //             console.log("HIDE it")
+    //           });
+    //       }
+    //     }
+
+    //     // 每 30秒 重新獲取一次最新資料並更新頁面
+    //     setInterval(updateData, 30000);
+        
+    //   });
+
+    // 網頁載入完成後的初始化
+    document.addEventListener("DOMContentLoaded", function() {
+          console.log("addEventListener")
+          // initializeButtonStates();
+          // updateButtonStates();
+
+          updateData();
+
+          // console.log("hide_yet:"+String(hide_yet))
+          // console.log(typeof(hide_yet))
+          
+          // // 隱藏所有樓層的內容
+          // if (hide_yet === 0) // 使此段隱藏程式碼只運作一次
+          // {
+          //   var floors = document.querySelectorAll('[class^="001_"]');
+          //   // console.log("floors:"+ String(floors[1].textContent))
+          //   floors.forEach(function(floor) {
+          //     floor.style.display = 'none';
+          //     console.log("success hide it")
+          //   });
+          // }
+          // hide_yet = hide_yet +1 
+          // console.log("hide_yet:"+String(hide_yet))
+          
+
+          // for (var i = 1; i <= 14; i++) {
+          //       var index = String(i);
+          //       var elements = document.getElementsByClassName('001_' + index + 'F');
+          
+          //       // 因為 getElementsByClassName 回傳的是 HTMLCollection，要進行迴圈設定 style 需要對每個元素進行處理
+          //       for (var j = 0; j < elements.length; j++) {
+          //         elements[j].style.display = 'none';
+          //       }
+          // }
+
+          // 綁定按鈕點擊事件
+          var buttons = document.querySelectorAll('[id^="button"]');
+          console.log("buttons"+String(buttons))
+          console.log(buttons)
+          buttons.forEach(function(button) {
+          button.addEventListener('click', function() {
+            // var buttonId = button.id;
+            // // toggleButtonVisibility(buttonId); // 切換按鈕的顯示狀態
+            // toggleButtonVisibility(buttonId);
+            var floorClass = button.textContent.trim();
+            toggleClassVisibility(floorClass);
+            });
+          });
+
+      initializeButtonStates();
+      updateData(); // 執行更新資料
+      // setInterval(updateData, 30000); // 設定定時更新
+    });
+
+   // 儲存按鈕的顯示狀態的物件
+  var buttonStates = {};
+
+  // 初始設定按鈕的顯示狀態
+  function initializeButtonStates() {
+    console.log("initializeButtonStates")
+    var buttons = document.querySelectorAll('[id^="button"]');
+    buttons.forEach(function(button) {
+    buttonStates[button.id] = false; // 初始化為顯示狀態
+    console.log('initializeBTN')
+    });
+  }
+
+  // 切換按鈕的顯示狀態
+  function toggleButtonVisibility(buttonId) {
+    console.log("toggleButtonVisibility")
+    console.log('buttonId:'+String(buttonId))
+    // var elements = document.getElementsByClassName(buttonId.slice(0, 7) + 'F');
+    var elements = document.getElementsByClassName(buttonId);
+    console.log('elements:'+String(elements))
+
+    for (var i = 0; i < elements.length; i++) {
+        if (elements[i].style.display === 'none') {
+          elements[i].style.display = 'block';
+          console.log('toggleBtn-block')
+          // buttonStates[buttonId] = true;
+        } else {
+          elements[i].style.display = 'none';
+          // buttonStates[buttonId] = false;
+          console.log('toggleBtn-nonek')
+        }
+      }
+      // 更新按鈕的顯示狀態
+    buttonStates[buttonId] = !buttonStates[buttonId];
+    console.log("buttonStates" + String(buttonStates))
+
+    }
+
+
+
+
+    // elements.forEach(function(element) {
+    //   if (element.style.display === 'none') {
+    //     element.style.display = 'block';
+    //     buttonStates[buttonId] = true;
+    //   } else {
+    //     element.style.display = 'none';
+    //     buttonStates[buttonId] = false;
+    //   }
+    // });
+    // // 更新按鈕的顯示狀態
+    // updateButtonStates();
+  // }
+
+  // 重新設定按鈕的顯示狀態
+  function updateButtonStates() {
+    console.log("updateButtonStates")
+    var buttons = document.querySelectorAll('[id^="button"]');
+    buttons.forEach(function(button) {
+      var buttonId = button.id;
+      var elements = document.getElementsByClassName(buttonId);
+      var displayState = buttonStates[buttonId] ? 'block' : 'none';
+
+      for (var i = 0; i < elements.length; i++) {
+        elements[i].style.display = displayState;
+      }
+    });
+    console.log('updateBtn')
+  }
+
+  
+
+  function toggleClassVisibility(className) {
+    console.log("toggleClassVisibility")
+    var elements = document.getElementsByClassName(className);
+    console.log("Elements:", elements);
+    for (var i = 0; i < elements.length; i++) {
+      console.log("Element:", elements[i]);
+      console.log("Display style before toggle:", elements[i].style.display);
+
+      if (elements[i].style.display === 'none') {
+        elements[i].style.display = 'block';
+      } else {
+        elements[i].style.display = 'none';
+      }
+      console.log("Display style after toggle:", elements[i].style.display);
+    }
+  }
+  //   var elements = document.getElementsByClassName(className);
+  //   var elementsArray = Array.from(elements);
+
+  //   elementsArray.forEach(function(element) {
+  //     if (element.style.display === 'none') {
+  //       element.style.display = 'block';
+  //       // buttonStates[buttonId] = true; // 更新按鈕的顯示狀態為 true（顯示）
+  //     } else {
+  //       element.style.display = 'none';
+  //       // buttonStates[buttonId] = false; // 更新按鈕的顯示狀態為 false（隱藏）
+  //     }
+  //   });
+  //     // 更新按鈕的顯示狀態
+  //   // updateButtonStates();
+  // }
+
+
+  function updateData() {
+  $.ajax({
+    url: 'http://127.0.0.1:5001/get_latest_data',
+    type: 'GET',
+    dataType: 'json',
+    success: function(response) {
+      console.log("updateData")
+      // console.log(JSON.stringify(response));
+      // 清空原有資料
+      $('#data_area').empty();
+      
+      // 更新頁面上的資料
+      Object.values(response).forEach(function(dataItem) {
+        // console.log("dataItem.washer_id:",dataItem.washer_id)
+        // console.log("dataItem.left_time:",dataItem.left_time)
+        // console.log("dataItem.state_id:",dataItem.state_id)
+
+        var floor_num;
+        floor_num = dataItem.washer_id.slice(3,6);
+        // 使用 parseInt() 將字串轉換為整數
+        var int_floor_num = parseInt(floor_num);  
+        // console.log(String(int_floor_num)+" F")
+
+        //to get each floor's washer_id
+        
+        // Get the middle part (characters between index 3 and 6)
+        var middlePart = dataItem.washer_id.substring(6, 9);
+        
+        // Convert the middle part to a number
+        var washer_id_each_floor = parseInt(middlePart);
+        console.log(washer_id_each_floor)
+
+  
+        var stateText;
+          if (dataItem.state_id === '0') {
+            stateText = "機門關閉";
+          } else if (dataItem.state_id === '1') {
+            stateText = "脫水";
+          } else if (dataItem.state_id === '2') {
+            stateText = "注水";
+          } else if (dataItem.state_id === '3') {
+            stateText = "攪洗";
+          } else if (dataItem.state_id === '4') {
+            stateText = "空機";
+          } else if (dataItem.state_id === '5') {
+            stateText = "洗衣";
+          } else {
+            stateText = "故障";
+          }
+
+        // var div1 = $('<div class="one_third first style="border: 2px solid red; padding: 10px; margin-bottom: 10px;"></div>');
+        // div.html('<strong>Left Time: ' + dataItem.left_time + '</strong><br>State ID: ' + dataItem.state_id + '<br>ID: ' + dataItem.washer_id);
+
+        // 使用模板字符串来动态生成HTML
+        // var div = $(`
+        //   <div class="group btmspace-10 demo">
+        //     <div class="one_third first">${dataItem.washer_id}</div>
+        //     <div class="one_third">${dataItem.state_id}</div>
+        //     <div class="one_third">${dataItem.left_time}</div>
+        //   </div>
+        // `);
+        console.log("shows up")
+        if (washer_id_each_floor === 1){        
+          var div = $('<h1 class="btmspace-10 001_'+ int_floor_num +'F ">'+int_floor_num+' F</h1><div class="group btmspace-10 demo 001_'+ int_floor_num +'F "><div class="one_third first">' + washer_id_each_floor + '</div><div class="one_third">'+ stateText + '</div><div class="one_third">'+ dataItem.left_time + '</div></div>');
+        }        
+        // div.html( dataItem.left_time  + dataItem.state_id  + dataItem.washer_id);
+        else if(washer_id_each_floor > 1){
+          var div = $('<div class="group btmspace-10 demo 001_'+ int_floor_num +'F "><div class="one_third first">' + washer_id_each_floor + '</div><div class="one_third">'+ stateText + '</div><div class="one_third">'+ dataItem.left_time + '</div></div>');
+        }
+        
+
+        // var div = $('<div class="one_third first" id="data_area_' + dataItem.washer_id + '" style="border: 2px solid red; padding: 10px; margin-bottom: 10px;"></div>');
+        // div.html('<strong>Left Time: ' + dataItem.left_time + '</strong><br>State ID: ' + dataItem.state_id + '<br>ID: ' + dataItem.washer_id);
+        // 將生成的元素先隱藏起來
+        div.css('display', 'none');
+
+        $('#data_area').append(div);
+      });
+
+
+        // // 在最開始隱藏所有樓層的內容
+        // console.log("hide_yet:"+String(hide_yet))
+
+        // if (hide_yet === Number(0)) // 使此段隱藏程式碼只運作一次
+        //   {
+        //     // 建立一個空陣列來存放所有符合條件的元素
+        //     var allElements = [];
+
+        //     // 選取從2F到14F的元素
+        //     for (var i = 2; i <= 14; i++) {
+        //       var floorClass = '001_' + i + 'F';
+        //       var elements = document.getElementsByClassName(floorClass);
+
+        //       // 將目前迴圈中選取的元素陣列合併到allElements中
+        //       allElements = allElements.concat(Array.from(elements));
+        //     }
+
+        //     // 現在allElements陣列中包含了所有符合條件的元素，你可以對這個陣列進行操作
+        //     // 例如隱藏所有元素
+        //     allElements.forEach(function(element) {
+        //       element.style.display = 'none';
+        //       // console.log("success hide it");
+        //       hide_yet = hide_yet +1 ;
+        //       // console.log("hide_yet:"+String(hide_yet));
+        //     });
+        //   }
+
+            // var floors = document.querySelectorAll('[class^="001_"]');
+            // if (floors.length === 0) 
+            // {
+            // // console.log("floors:"+ String(floors[1].textContent))
+            //   console.log("Number of elements in floors:", floors.length);
+            //   floors.forEach(function(floor) {
+            //   floor.style.display = 'none';
+            //   console.log("success hide it");
+            //   hide_yet = hide_yet +1 ;
+            //   console.log("hide_yet:"+String(hide_yet));
+            // });
+            // }
+          // }
+          // console.log("hide_yet:"+String(hide_yet));
+          // console.log("Number of elements in floors:", floors.length);
+          
+          
+      // // 更新按鈕的顯示狀態 
+      // for (var buttonId in buttonStates) {
+      //     var displayState = buttonStates[buttonId] ? 'block' : 'none';
+      //     var elements = document.getElementsByClassName(buttonId);
+      //     for (var i = 0; i < elements.length; i++) {
+      //       elements[i].style.display = displayState;
+      //   // }
+      // }
+
+
+      // for (var i = 1; i <= 14; i++) {
+      //   var index = String(i);
+      //   var elements = document.getElementsByClassName('001_' + index + 'F');
+  
+      //   // 因為 getElementsByClassName 回傳的是 HTMLCollection，要進行迴圈設定 style 需要對每個元素進行處理
+      //   for (var j = 0; j < elements.length; j++) {
+      //     elements[j].style.display = 'none';
+      //   // }
+      // }
+
+    // 重新設定按鈕的顯示狀態
+    // updateButtonStates();
+    },
+    error: function(xhr, status, error) {
+      console.error('Error:', error);
+    }
+  });
+}
+
+  // $(document).ready(function() {
+  //   updateData();
+  //   console.log('updateData');
+  //   setInterval(updateData, 10000);
+  // });
+  </script>
+ 
+
+
+  
+  <!-- <script>
+    window.onload = function(){
+      for (var i = 1; i <= 14; i++) {
+        var index = String(); // 取得索引值
+        document.getElementsByClassName('001_' + index+'F').style.display = 'none';
+      }
+    };
+  </script> -->
+  <!-- <script>
+    window.onload = function() {
+      for (var i = 1; i <= 14; i++) {
+        var index = String(i).padStart(3, '0'); // 取得索引值，使用padStart函數將索引值補零成三位數
+        var elements = document.getElementsByClassName('001_' + index + 'F');
+  
+        // 因為 getElementsByClassName 回傳的是 HTMLCollection，要進行迴圈設定 style 需要對每個元素進行處理
+        for (var j = 0; j < elements.length; j++) {
+          elements[j].style.display = 'none';
+        }
+      }
+    };
+  </script> -->
+  
+<!-- <script>
+function updateData() {
+  // 使用 AJAX 向伺服器發送請求，獲取最新的資料
+  $.ajax({
+    url: '/get_latest_data', // 伺服器接口的 URL
+    type: 'GET',
+    dataType: 'json',
+    success: function(response) {
+      // 清空原有資料
+      $('#data_area').empty();
+
+      // 更新頁面上的資料
+      for (var i = 0; i < response.length; i++) {
+        var dataItem = response[i];
+        var div = $('<div class="one_third first" id="data_area_' + dataItem.washer_id + '" style="border: 2px solid red; padding: 10px; margin-bottom: 10px;"></div>');
+        div.html('<strong>ID: ' + dataItem.washer_id + '</strong><br>State ID: ' + dataItem.state_id + '<br>Left Time: ' + dataItem.left_time);
+        $('#data_area_' + dataItem.washer_id).remove(); // 先移除之前的元素，避免重複添加
+        $('#data_area').append(div);
+      }
+    },
+    error: function(xhr, status, error) {
+      // 處理錯誤情況
+      console.error('Error:', error);
+    }
+  });
+}
+
+// 頁面載入完成後，立即獲取一次最新資料並更新頁面
+updateData();
+
+// 每 10 秒重新獲取一次最新資料並更新頁面
+setInterval(updateData, 10000);
+  
+</script> -->
+
+<!-- <script>
+  // 自動重新載入頁面的函數
+  function autoReload() {
+      location.reload(); // 重新載入頁面
+  }
+
+  // 每1分鐘(60秒)自動重新載入一次頁面
+  // setInterval(autoReload, 60000); 
+  setInterval(autoReload, 10000); 
+
+</script> -->
+
+</body>
+
+
+
+</html>

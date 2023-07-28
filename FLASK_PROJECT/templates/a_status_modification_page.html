@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<!--
+Template Name: Drywest
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>洗衣小秘書管理系統</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../static/layout.css" rel="stylesheet" type="text/css" media="all">
+<style type="text/css">
+/* DEMO ONLY */
+.container .demo{text-align:center;}
+.container .demo div{padding:8px 0;}
+.container .demo div:nth-child(odd){color:#000000; background:#FFFFFF; border:0.1px #000000 solid;}
+.container .demo div:nth-child(even){color:#000000; background:#FFFFFF; border:0.1px #000000 solid;}
+@media screen and (max-width:900px){.container .demo div{margin-bottom:0;}}
+/* DEMO ONLY */
+</style>
+</head>
+<body id="top">
+
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" style="padding:0px;" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1><img style="height:80px;padding:10px;" src="static/logo.png" /><a href="../index.html">洗衣小秘書</a></h1>
+    </div>
+    <div class="fl_right"><a style="margin:0px;" class="btn" href="#">Log out</a></div>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded" style="background-image:url('static/01.png');"> 
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div style="padding-bottom: 25px; margin-bottom: -50px; " class="content">
+      <!-- ################################################################################################ -->
+      <!-- ################################################################################################ -->
+      <h2>狀態變更</h2>
+      <div style="color:black;" class="group btmspace-15 demo" >
+        <button id="broken-btn"  class="one_third first" >
+          故障登記
+        </button>
+        <button  id="fixed-btn" class="one_third" >
+          維修完畢
+        </button>
+        <button  id="delete-btn" class="one_third" >
+          刪除機臺
+        </button>
+      </div>
+      
+      <h2>機臺狀態</h2>
+
+      <!-- <p>
+        <button onclick="gotoPage('a_check_record_page.html')" style="height:25px;background-color:white;">全機台編輯紀錄</button>
+        /
+      <button style="height:25px;background-color:white;">新增機臺</button>
+    </p> -->
+
+      <!-- ################################################################################################ -->
+      <!-- <div style="color:black;" class="group btmspace-15 demo" >
+        <div style="background:#D0CECE;" class="one_third first">編號</div>
+        <div style="background:#D0CECE;" class="one_third">狀態</div>
+        <div style="background:#D0CECE;" class="one_third">運轉剩餘時間</div>
+      </div> -->
+
+      <!-- {% for item in items %}
+  
+      <div class="group btmspace-10 demo" >
+        <button style="height:38px;background-color:white;" class="one_third first" id="data_area">
+          {{ item.washer_id }}
+        </button>
+        <div class="one_third" >{{ item.state_id }}</div>
+        <div class="one_third" >{{ item.left_time }}</div>
+      </div>
+      {% endfor %} -->
+
+
+      <!-- 增加測試用的<div>元素 -->
+        <!-- <div>
+          {% if items %}
+            {% for item in items %}
+              <h2>{{ item }}</h2>
+            {% endfor %}
+          {% else %}
+            <h2>its null</h2>
+          {% endif %}
+        </div>
+
+        <div>
+          {% for item in items %} 
+            <div class="one_third first" id="data_area_{{ item.washer_id }}" style="border: 2px solid red; padding: 10px; margin-bottom: 10px;">
+              <strong>Left Time: {{ item.left_time }}</strong> 
+              <br>State ID: {{ item.state_id }}<br>
+              ID: {{ item.washer_id }}
+            </div>
+          {% endfor %}
+        </div> -->
+
+        <div  id="data_area">
+
+        </div>
+        <div id="normal-washer-buttons-container"></div>
+        <div id="broken-washer-buttons-container"></div>
+        <div id="confirmation-message"></div>
+        <button id="confirm-yes" style="display: none;">是</button>
+        <button id="confirm-no" style="display: none;">否</button>
+        
+
+        <!-- <div>
+          {item}
+        
+          {% for item in items %} 
+            <h2>item</h2> -->
+             <!-- <div class="one_third first" id="data_area_{{ item.washer_id }}" style="border: 2px solid red; padding: 10px; margin-bottom: 10px;">
+              <strong>Left Time: </strong> 
+              <br>State ID: <br>
+              ID: 
+            </div>  -->
+          <!-- {% endfor %} 
+        </div> -->
+        
+        
+
+      <!--      <div class="group demo">-->
+<!--        <div class="one_third first">1/3</div>-->
+<!--        <div class="two_third">2/3</div>-->
+<!--      </div>-->
+
+<!--      <h2>Half</h2>-->
+<!--      &lt;!&ndash; ################################################################################################ &ndash;&gt;-->
+<!--      <div class="group btmspace-50 demo">-->
+<!--        <div class="one_half first">1/2</div>-->
+<!--        <div class="one_half">1/2</div>-->
+<!--      </div>-->
+<!--      &lt;!&ndash; ################################################################################################ &ndash;&gt;-->
+<!--      <h2>Quarter</h2>-->
+<!--      &lt;!&ndash; ################################################################################################ &ndash;&gt;-->
+<!--      <div class="group btmspace-50 demo">-->
+<!--        <div class="one_quarter first">1/4</div>-->
+<!--        <div class="one_quarter">1/4</div>-->
+<!--        <div class="one_quarter">1/4</div>-->
+<!--        <div class="one_quarter">1/4</div>-->
+<!--      </div>-->
+<!--      <div class="group btmspace-50 demo">-->
+<!--        <div class="one_quarter first">1/4</div>-->
+<!--        <div class="one_quarter">1/4</div>-->
+<!--        <div class="two_quarter">2/4 or 1/2</div>-->
+<!--      </div>-->
+<!--      <div class="group btmspace-50 demo">-->
+<!--        <div class="one_quarter first">1/4</div>-->
+<!--        <div class="three_quarter">3/4</div>-->
+<!--      </div>-->
+
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+
+    <!-- <div class="clear"></div>
+  </main>
+</div> -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- <div class="wrapper row0">
+  <div id="topbar" class="hoc clear">
+     ################################################################################################ -->
+    <!-- <ul>
+      <li><i class="fa fa-clock-o"></i> Mon. - Fri. 8am - 5pm</li>
+      <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
+      <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
+      <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
+      <li><a href="#" title="Login"><i class="fa fa-lg fa-sign-in"></i></a></li>
+      <li><a href="#" title="Sign Up"><i class="fa fa-lg fa-edit"></i></a></li>
+    </ul> -->
+    <!-- ################################################################################################ -->
+  <!-- </div>
+</div>  -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+  
+  <!-- <div class="wrap"> -->
+    <!-- <div class="group btmspace-50 demo">
+    <div class="banner video-container" style="transform: scale(0.3); max-width: 100%;max-height: 400px;margin: 0 auto;">  -->
+      <!-- 添加video-container類別 -->
+      <!-- <video autoplay muted loop style="float: right;">
+        <source src="../static/small.mp4"  type="video/mp4">
+      </video>
+        </div>
+      </div> 
+    </div>
+    </div> -->
+
+
+    <!-- .video-container {  /* a_uer_page.html 影片*/
+      max-width: 100%; /* 影片寬度最大不超過容器的100% */
+      max-height: 400px; /* 影片高度最大不超過400像素 */
+      margin: 0 auto; /* 如果需要，使影片在容器中水平居中 */
+      max-width: 100%; /* 影片寬度最大不超過容器的100% */
+
+      max-height: 100%; /* 影片高度最大不超過容器的100% */
+      margin: 0 auto; /* 如果需要，使影片在容器中水平居中 */
+      transform: scale(0.5); /* 將影片縮放為原來的50%，你可以根據需要調整縮放比例 */
+     } -->
+  
+<!-- </div> -->
+
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="static/jquery.min.js"></script>
+<script src="static/jquery.backtotop.js"></script>
+<script src="static/jquery.mobilemenu.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  function gotoPage(pageUrl) {
+    window.location.href = pageUrl;
+  }
+</script>
+<script>
+  function gotoPage(pageUrl) {
+    window.location.href = pageUrl;
+  }
+</script>
+
+
+  <script>
+// JavaScript 部分
+var brokenBtn = document.getElementById('broken-btn');
+var fixedBtn = document.getElementById('fixed-btn');
+var deleteBtn = document.getElementById('delete-btn');
+var normalWasherButtonsContainer = document.getElementById('normal-washer-buttons-container');
+var brokenWasherButtonsContainer = document.getElementById('broken-washer-buttons-container');
+var confirmationMessage = document.getElementById('confirmation-message');
+var confirmYesBtn = document.getElementById('confirm-yes');
+var confirmNoBtn = document.getElementById('confirm-no');
+
+var normalWashingMachines = [];
+var brokenWashingMachines = [];
+
+function updateData() {
+  $.ajax({
+    url: 'http://127.0.0.1:5001/get_latest_data',
+    type: 'GET',
+    dataType: 'json',
+    success: function(response) {
+      onsole.log("updateData")
+      // console.log(JSON.stringify(response));
+      // 清空原有資料
+      $('#data_area').empty();
+      
+      // 更新頁面上的資料
+      Object.values(response).forEach(function(dataItem) {
+        var floor_num;
+        floor_num = dataItem.washer_id.slice(3,6);
+        // 使用 parseInt() 將字串轉換為整數
+        var int_floor_num = parseInt(floor_num);  
+        // console.log(String(int_floor_num)+" F")
+
+        //to get each floor's washer_id
+        
+        // Get the middle part (characters between index 3 and 6)
+        var middlePart = dataItem.washer_id.substring(6, 9);
+        
+        // Convert the middle part to a number
+        var washer_id_each_floor = parseInt(middlePart);
+        console.log(washer_id_each_floor)
+
+        // 判断狀態是正常還是故障
+        if (dataItem.state_id === '6') {
+          brokenWashingMachines.push({
+            state_id: dataItem.state_id,
+            floor_num: int_floor_num,
+            washer_num: washer_id_each_floor
+          });
+        } else {
+          normalWashingMachines.push({
+            state_id: dataItem.state_id,
+            floor_num: int_floor_num,
+            washer_num: washer_id_each_floor
+          });
+        }
+
+        // ...省略其他代码...
+      });
+      
+      // 更新洗衣机按钮
+      showWasherButtons('broken');
+      showWasherButtons('fixed');
+      showWasherButtons('delete');
+    },
+    error: function(xhr, status, error) {
+      console.error('Error:', error);
+    }
+  });
+}
+
+brokenBtn.addEventListener('click', function() {
+  showWasherButtons('broken');
+});
+
+fixedBtn.addEventListener('click', function() {
+  showWasherButtons('fixed');
+});
+
+deleteBtn.addEventListener('click', function() {
+  showWasherButtons('delete');
+});
+
+function showWasherButtons(selectedState, functionName) {
+  var washingMachines = (selectedState === 'broken') ? brokenWashingMachines : normalWashingMachines;
+  var washerButtonsContainer = (selectedState === 'broken') ? brokenWasherButtonsContainer : normalWasherButtonsContainer;
+
+  // 清空洗衣机按钮容器
+  washerButtonsContainer.innerHTML = '';
+  // 清空确认消息容器
+  confirmationMessage.textContent = '';
+  // 隐藏“是”和“否”按钮
+  confirmYesBtn.style.display = 'none';
+  confirmNoBtn.style.display = 'none';
+
+  // 遍历 washingMachines 数组，根据状态显示按钮
+  for (var i = 0; i < washingMachines.length; i++) {
+    var machine = washingMachines[i];
+
+    var washerButton = document.createElement('button');
+    washerButton.textContent = machine.floor_num + 'num' + machine.washer_num;
+    washerButtonsContainer.appendChild(washerButton);
+
+    washerButton.addEventListener('click', function() {
+      var confirmMessage = '确定要 ' + functionName + ' ' + this.textContent + ' 吗？';
+      confirmationMessage.textContent = confirmMessage;
+      confirmYesBtn.style.display = 'inline';
+      confirmNoBtn.style.display = 'inline';
+      confirmYesBtn.addEventListener('click', function() {
+        executeConfirmationAction(true, this.textContent);
+      });
+      confirmNoBtn.addEventListener('click', function() {
+        executeConfirmationAction(false);
+      });
+    });
+  }
+}
+
+function executeConfirmationAction(isConfirmed, machineInfo) {
+  if (isConfirmed) {
+    console.log('Confirmed! ' + machineInfo);
+  } else {
+    console.log('Cancelled!');
+  }
+
+  confirmationMessage.textContent = '';
+  confirmYesBtn.style.display = 'none';
+  confirmNoBtn.style.display = 'none';
+}
+  </script>
+ 
+</body>
+
+
+
+</html>
